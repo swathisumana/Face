@@ -1,115 +1,227 @@
-div{
+.divh{
+        border-style: solid;
+        border-width: 5px;
+        height: 500px;
+        width: 600px;
+        border-radius: 250px;
+        margin-right: 100px;
+        background-color: #ffff1a;
+    }
+    
+    @keyframes anticlock-move {
+        0% {
+            transform: rotate(360deg);
+            background: red;
+        }
+        25% {
+            transform: rotate(270deg);
+            background: blue;
+        }
+        50% {
+            transform: rotate(180deg);
+            background: yellow;
+        }
+        75% {
+            transform: rotate(90deg);
+            background: green;
+        }
+        100% {
+            transform: rotate(0deg);
+            background: red;
+        }
+    }
+    
+    @keyframes clock-move {
+        0% {
+            transform: rotate(0deg);
+            background: red;
+        }
+        25% {
+            transform: rotate(90deg);
+            background: blue;
+        }
+        50% {
+            transform: rotate(180deg);
+            background: yellow;
+        }
+        75% {
+            transform: rotate(270deg);
+            background: green;
+        }
+        100% {
+            transform: rotate(360deg);
+            background: red;
+        }
+    }
+    
+    @keyframes nose-zooml {
+        0% {
+            transform: scale(0.5, 0.5);
+            background: red;
+        }
+        25% {
+            transform: scale(2, 3);
+            background: blue;
+        }
+        50% {
+            transform: scale(o.5, 0.5);
+            background: pink;
+        }
+        75% {
+            transform: scale(2, 3);
+            background: green;
+        }
+        100% {
+            transform: scale(0.5, 0.5);
+            background: cyan;
+        }
+    }
+    
+    @keyframes nose-zoomr {
+        0% {
+            transform: scale(0.5, 0.5);
+            background: yellow;
+        }
+        25% {
+            transform: scale(2, 3);
+            background: red;
+        }
+        50% {
+            transform: scale(o.5, 0.5);
+            background: pink;
+        }
+        75% {
+            transform: scale(2, 3);
+            background: green;
+        }
+        100% {
+            transform: scale(0.5, 0.5);
+            background: cyan;
+        }
+    }
+    
+    .eye {
+        border-style: solid;
+        border-width: 5px;
+        height: 70px;
+        width: 70px;
+        border-radius: 10px;
+        background-color: #ff6633;
+    }
+    
+    .left-eye {
+        top: 500px;
+        float: left;
+        margin-left: 120px;
+        margin-top: 100px;
+        animation: anticlock-move 1s infinite;
+    }
+    
+    .right-eye {
+        top: 500px;
+        float: right;
+        margin-right: 120px;
+        margin-top: 100px;
+        animation: clock-move 1s infinite;
+    }
+    
+    .eyeball {
+        border-radius: 20px;
+        border-style: solid;
+        height: 20px;
+        width: 20px;
+        background-color: cyan;
+        border-radius: 10px;
+        padding-top: 0px;
+        margin-bottom: 30px;
+        margin-left: 30px animation: clock-move 5s infinite;
+    }
+    
+    .leftnose {
+        background-color: red;
+        width: 10px;
+        height: 10px;
+        border-radius: 100px;
+        border-style: solid;
+        border-width: 10px;
+        margin-top: 90px;
+        margin-left: 265px;
+        float: left;
+        animation: nose-zooml 1s infinite;
+    }
+    
+    .rightnose {
+        background-color: green;
+        width: 10px;
+        height: 10px;
+        border-radius: 100px;
+        border-style: solid;
+        border-width: 10px;
+        margin-top:90px;
+        margin-right: 265px;
+        float: right;
+        animation: nose-zooml 1s infinite;
+    }
+    
+    .lips {
+        margin-top: 380px;
+        margin-left:50px;
+    }
+    
+    .span-prop {
+        background: none repeat scroll 0 0 #F8F8F8;
+        border: 5px solid #DFDFDF;
+        color: #717171;
+        font-size: 13px;
+        height: 30px;
+        letter-spacing: 1px;
+        line-height: 30px;
+        position: absolute;
+        text-align: center;
+        text-transform: uppercase;
+        top: -80px;
+        left: -30px;
+        display: none;
+        padding: 0 20px;
+    }
+    
+    .divp {
+        width: 0px;
+        height: 0px;
+        border: 0px;
+    }
+    
+    #s1 {
+        margin: 150px 0 0 120px;
+    }  
 
- border-style: solid;
- border-width: 5px;
- height: 500px;
- width:600px;
- border-radius: 250px;
- margin-right: 100px;
- background-color: #ffff1a;
+#s2 {
+        margin: 150px 0 0 400px;
+    }
+#s3 {
+        margin: 300px 0 0 300px;
+    }
+    #s4{
+        margin: 430px 0 0 300px;
+    }
+
+
+
+span:after{
+     content:'';
+    position: absolute;
+        bottom:-10px;
+    width:10px;
+    height:10px;
+    border-bottom:5px solid #dfdfdf;
+    border-right:5px solid #dfdfdf;
+    background:#f8f8f8;
+    left:50%;
+    margin-left:-5px;
+    
+    transform:rotate(45deg);
 }
-@keyframes anticlock-move {
-    0%   {transform: rotate(360deg); background: red;}
-    25%  {transform: rotate(270deg); background: blue;}
-    50%  {transform: rotate(180deg); background: yellow;}
-    75%  {transform: rotate(90deg); background: green;}
-    100% {transform: rotate(0deg); background: red;}
-}
-@keyframes clock-move {
-    0%   {transform: rotate(0deg); background: red;}
-    25%  {transform: rotate(90deg); background: blue;}
-    50%  {transform: rotate(180deg); background: yellow;}
-    75%  {transform: rotate(270deg); background: green;}
-    100% {transform: rotate(360deg); background: red;}
-}
-@keyframes nose-zooml {
-    0%   {transform: scale(0.5,0.5); background: red;}
-    25%  {transform: scale(2,3); background: blue;}
-    50%  {transform: scale(o.5,0.5); background: pink;}
-    75%  {transform: scale(2,3); background: green;}
-    100% {transform: scale(0.5,0.5); background: cyan;}
-}
-@keyframes nose-zoomr {
-    0%   {transform: scale(0.5,0.5); background: yellow;}
-    25%  {transform: scale(2,3); background: red;}
-    50%  {transform: scale(o.5,0.5); background: pink;}
-    75%  {transform: scale(2,3); background: green;}
-    100% {transform: scale(0.5,0.5); background: cyan;}
-}
+    .first:hover span {
+        display: block;
 
-.eye{
-
-border-style: solid;
- border-width: 5px;
- height: 70px;
- width:70px;
- border-radius: 10px;
- background-color: #ff6633;
-}
-
-.left-eye{
-     top: 500px;
-     float: left;
-     margin-left: 120px;
-     margin-top: 100px;
-     animation: anticlock-move 1s infinite;
-
-}
-
-.right-eye{
-     top: 500px;
-     float: right;
-     margin-right: 120px;
-     margin-top: 100px;
-     animation: clock-move 1s infinite;
-
-}
-.eyeball{
-     border-radius: 20px;
-     border-style: solid;
-     height: 20px;
-     width:20px;
-     background-color:cyan; 
-     border-radius: 10px;
-     padding-top:0px;
-     margin-bottom: 30px;
-     margin-left: 30px
-     animation:clock-move 5s infinite;
-}
-
-
-.leftnose{
-     background-color:red; 
-     width:10px;
-     height: 10px;
-     border-radius: 100px;
-     border-style:solid ;
-     border-width:10px;
-     margin-top:90px;
-     margin-left: 265px;
-     float:left ;
-     animation: nose-zooml 1s infinite;
-}
-
-.rightnose{
-     background-color:green; 
-     width:10px;
-     height: 10px;
-     border-radius: 100px;
-     border-style:solid ;
-     border-width:10px;
-     margin-top:-30px;
-     margin-right: 265px;
-     float: right;
-     animation: nose-zooml 1s infinite;
-}
-
-
-.lips{
-margin-top:380px;
-margin-left:-45px
-     }
-
-
-
-
+    }
